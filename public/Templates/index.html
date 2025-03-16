@@ -1,0 +1,480 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+<!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+<style>
+    .advert-header { 
+        font-family: "Lato", sans-serif; /* Clean and modern font */
+        font-size: 2rem; /* Large text for the header */
+        font-weight: bold;
+        color: rgb(11, 6, 83); /* Deep blue */
+        text-transform: uppercase;
+    }
+    
+    .advert-text {
+        font-family: "Open Sans", sans-serif; /* Professional and readable font */
+        font-size: 1rem; /* Medium text size for readability */
+        color: #444; /* Dark gray */
+        line-height: 1.6; /* Comfortable line spacing */
+    }
+    
+    .text-center {
+        text-align: center;
+    }
+    
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .ad-card {
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .ad-title {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        margin: 0;
+        background: linear-gradient(45deg, #8B0000, rgb(11, 6, 83));
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-family: "Poppins", sans-serif; /* Bold and modern */
+        font-size: 1.5rem; /* Suitable size for titles */
+        font-weight: bold;
+        color: white;
+    }
+    
+    .ad-content {
+        position: absolute;
+        bottom: 20px;
+        width: 80%;
+        padding: 15px;
+        border-radius: 8px;
+    }
+    
+    .ad-content p {
+        font-family: "Roboto", sans-serif; /* Clean and lightweight font */
+        font-size: 1rem;
+        color: white;
+        line-height: 1.5;
+    }
+    
+    .ad-btn {
+        font-family: "Lato", sans-serif; /* Matching button text */
+        font-size: 0.9rem;
+        background-color: #8B0000; /* Dark red */
+        border: none;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    
+    .ad-btn:hover {
+        background-color: rgb(7, 8, 85); /* Deep blue on hover */
+        color:white ;
+    }
+    
+    .ad-card1 {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        color: black;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+    }
+    
+    .ad-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Icon Styling */
+    .ad-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+    
+    /* Text Styling */
+    .ad-text {
+        font-family: "Montserrat", sans-serif; /* Stylish and elegant font */
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+ </style>
+ 
+ <!-- Google Fonts -->
+ 
+</head>
+<body>
+    <div class="row justify-content-center">
+        
+        <div class="col-sm-md" style="background-color:#ffffff; position: fixed; top: 80%; right: 0; width: 150px; z-index: 1000; text-align: center; padding: 10px; border-radius: 5px 0 0 5px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); transform: translateY(-50%);">
+            <p style="margin: 0; font-weight: bold; color: :black;">CONTACT US</p>
+            <a href="https://wa.me/255719363640" target="_blank" class="btn btn-success animate-container1" style="color: white; text-decoration: none; font-size: 16px;">
+                Message WhatsApp <img src="{% static 'image/whatsapp.png' %}" style="width: 15px;">
+            </a>
+        </div>
+      </div>
+
+    
+        
+        <!-- Carousel -->
+        <div class="col-12 col-sm-8 col-md-12 mb-3">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{% static 'image/I014.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/I011.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{% static 'image/PHOTO-2024-12-24-08-41-10.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 3">
+                    </div>
+                    
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-md-1 ">
+        </div>
+        <div class="col-12 col-sm-8 col-md-10 mb-3 text-center mx-auto">
+            <h1 class="advert-header">Welcome To MHD Home Group Company</h1>
+            <br>
+            <p class="advert-text">
+              <i> MHD Home Decor Company Ltd transforms spaces into beautiful, comfortable, and inspiring environments with personalized, high-quality decor solutions tailored to your style and budget for homes, offices, or special occasions. </i></p>
+            
+        
+         </div>
+<div class="col-sm-8 col-md-1 ">
+</div>
+</div>
+
+
+    
+ 
+<div class="row" style=" padding:35px;">
+    
+    <!-- First Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'Carpet_tiles' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/cp4.png' %}');">
+                <h3 class="ad-title">Carpet Tiles</h3>
+                <div class="ad-content">
+                  <a href="{% url 'Carpet_tiles' %}" class="btn ad-btn">More Carpet tiles >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+    
+
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'Interior_decoration'  %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/I018.jpg' %}');">
+                <h3 class="ad-title">Interior decoration</h3>
+                <div class="ad-content">
+                  <a href="{% url 'Interior_decoration'  %}" class="btn ad-btn">Interior decoration >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+
+    <!-- Third Image -->
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'furniture' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/fu2.jpg' %}');">
+                <h3 class="ad-title">Furniture</h3>
+                <div class="ad-content">
+                   <a href="{% url 'furniture' %}" class="btn ad-btn">Furniture >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+
+    <!-- Fourth Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'spc' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/spc7.jpeg' %}');">
+                <h3 class="ad-title">spc</h3>
+                <div class="ad-content">
+                   <a href="{% url 'spc' %}" class="btn ad-btn">spc >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+    
+  </div>
+      <div class="row" style=" padding:35px;">
+    
+    <!-- First Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'Lvt' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/lvt.jpg' %}');">
+                <h3 class="ad-title">Lvt</h3>
+                <div class="ad-content">
+                    <a href="{% url 'Lvt'  %}" class="btn ad-btn">Lvt >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+    
+
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'Blinds' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/blind.jpg' %}');">
+                <h3 class="ad-title">Blinds</h3>
+                <div class="ad-content">
+                    <a href="{% url 'Blinds' %}" class="btn ad-btn">Blinds >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+
+    <!-- Third Image -->
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'wallTowall' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/spc4.jpeg' %}');">
+                <h3 class="ad-title">Wall to wall carpet</h3>
+                <div class="ad-content">
+                    <a href="{% url 'wallTowall' %}" class="btn ad-btn">Wall to wall >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3 mb-3" style="height: 390px;">
+        <a href="{% url 'Vinylsheetfloor' %}" style="text-decoration: none; color: white; width: 100%;  padding: 10px; text-align: center;">
+               
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/vinyl.jpg' %}');">
+                <h3 class="ad-title">Vinylsheetfloor</h3>
+                <div class="ad-content">
+                   <a href="{% url 'Vinylsheetfloor' %}" class="btn ad-btn">Vinylsheetfloor >>></a>
+                </div>
+            
+        </div>
+    </a>
+    </div>
+    
+</div>
+
+
+ 
+
+ 
+
+
+
+
+
+   
+    <div class="row">
+        <div class="col-12 col-sm-2 col-md-1">
+        </div>
+        <!-- 24 Hours Rapid Response -->
+        <div class="col-10 col-sm-2 col-md-2 mb-3" style=" margin:40px;">
+            <div class="ad-card1">
+                <img src="{% static 'image/telephone-call.png' %}" alt="Rapid Response" class="ad-icon">
+                <p class="ad-text">24 Hours Rapid Response</p>
+            </div>
+        </div>
+
+        <!-- 50+ Trusted Companies -->
+        <div class="col-10 col-sm-2 col-md-2 mb-3" style=" margin:40px;">
+            <div class="ad-card1">
+                <img src="{% static 'image/buildings.png' %}" alt="Trusted Companies" class="ad-icon">
+                <p class="ad-text">50+ Companies Trust Us</p>
+            </div>
+        </div>
+
+        <!-- 30+ Regions Nationwide -->
+        <div class="col-10 col-sm-2 col-md-2 mb-3" style=" margin:40px;">
+            <div class="ad-card1">
+                <img src="{% static 'image/earth-grid.png' %}" alt="Regions Covered" class="ad-icon">
+                <p class="ad-text">30+ Regions Nationwide</p>
+            </div>
+        </div>
+
+        <!-- 150+ Long-Term Clients -->
+        <div class="col-10 col-sm-2 col-md-2 mb-3" style=" margin:40px;">
+            <div class="ad-card1">
+                <img src="{% static 'image/rating.png' %}" alt="Stable Customers" class="ad-icon">
+                <p class="ad-text">150+ Long-Term Clients</p>
+            </div>
+        </div>
+    
+      </div>
+      <div class="col-10 col-sm-2 col-md-1 mb-3" style="background-color:;">
+        
+
+       </div>
+   
+   </div>
+   <br>
+  </div>
+  <div class="row mb-3" style="">
+    
+    
+
+
+    <div class="col-12 col-sm-3 col-md-3"></div>
+    
+      <div class="col-12 col-sm-6 col-md-6 mb-3">
+        <h3 class="text-center" style="color: black;">WHAT OUR CUSTOMER SAYS</h3>
+        
+        
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner-img">
+            <div class="carousel-item active">
+                <img src="{% static 'image/cs.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'image/cs1.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'image/cs3.jpg' %}" class="d-block w-100 img-fluid" alt="Slide 3">
+            </div>
+            
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+     </div>
+      </div>
+     <div class="col-12 col-sm-3 col-md-3">
+
+     </div>
+     
+
+</div>
+
+
+
+
+
+
+    
+
+{% include "footer.html" %}
+
+<!-- Required Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    // Manually initialize the carousel to ensure it works
+    var carousel = new bootstrap.Carousel('#carouselExample', {
+        interval: 3000, // Slide interval in milliseconds
+        ride: 'carousel'
+    });
+</script>
+
+<style>
+    .carousel-inner img {
+        height: 400px;
+        
+        object-fit: cover;
+    }
+
+    .carousel-inner-img {
+        height: 400px;
+   
+        object-fit: cover;
+    }
+    @keyframes fadeInOutwards {
+        0%{
+            transform: scale(1.5);
+            opacity: 0;1`
+        }
+        50%{
+            transform: scale(1.2);
+            opacity:0.5;
+        }
+        100%{
+            transform: scale(1);
+            opacity:1;
+        }
+
+
+    }
+
+   
+
+    
+</style>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

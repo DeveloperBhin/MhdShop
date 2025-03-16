@@ -1,0 +1,283 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+<!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+<style>
+    .advert-header {
+        font-family: "Roboto", sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #D4AF37; /* Gold color */
+        text-transform: uppercase;
+    }
+ 
+    .advert-text {
+        font-family:"Roboto Arial", sans-serif;
+        font-size: 1.2rem;
+        color: #444;
+        line-height: 1.6;
+    }
+ 
+    .text-center {
+        text-align: center;
+    }
+ 
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ad-card{
+        
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+       
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ad-title {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        margin: 0;
+        background: linear-gradient(45deg, #8B0000, #D4AF37);
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-family: "Roboto Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .ad-content {
+        position: absolute;
+        bottom: 20px;
+        width: 80%;
+       
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .ad-content p {
+        font-family: "Roboto Lora", serif;
+        font-size: 1rem;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .ad-btn {
+        font-family: " Roboto Playfair Display", serif;
+        font-size: 0.9rem;
+        background-color: #D4AF37;
+        border: none;
+        color: black;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .ad-btn:hover {
+        background-color: #b98a20;
+        color: white;
+    }
+    
+
+
+    /* Icon Styling */
+    .ad-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    /* Text Styling */
+    .ad-text {
+        font-family: "Roboto Arial", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+ </style>
+ 
+ <!-- Google Fonts -->
+ 
+</head>
+<body>
+    <div class="col-sm-md" style="background-color:#ffffff; position: fixed; top: 80%; right: 0; width: 150px; z-index: 1000; text-align: center; padding: 10px; border-radius: 5px 0 0 5px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); transform: translateY(-50%);">
+        <p style="margin: 0; font-weight: bold; color: :black;">CONTACT US</p>
+        <a href="https://wa.me/255719363640" target="_blank" class="btn btn-success animate-container1" style="color: white; text-decoration: none; font-size: 16px;">
+            Message WhatsApp <img src="{% static 'image/whatsapp.png' %}" style="width: 15px;">
+        </a>
+    </div>
+  
+    <div class="row">
+        <div class="col-sm-8 col-md-1 ">
+        </div>
+        <div class="col-12 col-sm-8 col-md-10 mb-3 text-center mx-auto">
+            
+            <br>
+            <p class="advert-text" style="color:rgb(11, 6, 83);">
+              <i> 
+                Elevate your space with our exceptional interior decoration solutions. Designed to blend style and functionality, our services bring beauty, comfort, and a personalized touch to any room. Whether it’s your home or office, we create stunning, lasting designs that reflect your taste and lifestyle.</i></p>
+            
+        
+         </div>
+<div class="col-sm-8 col-md-1 ">
+</div>
+</div>
+
+    
+ 
+<div class="row" style=" padding:20px; border-radius:5px; border:1px solid  #b98a20;">
+    
+    <!-- First Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="height: 390px;">
+              
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/I022.jpg' %}');">
+                
+                
+            
+        </div>
+    
+    </div>
+    
+
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="">
+        
+        <br>
+        <p class="advert-text">
+            <b>The interior decoration is a mix of modern and traditional elements.</b><br>
+
+            Modern Elements:
+            
+            The clean lines and minimalist design of the chairs and seating arrangement.
+            The use of bright, modern colors like red and white for the carpeting and walls.
+            The sleek and modern design of the railings.</p>
+        
+        <p class="advert-text">
+            Traditional Elements:
+
+            The wooden paneling on the walls and ceiling.
+            The traditional Tanzanian coat of arms prominently displayed.
+            The use of traditional materials like wood for the furniture and decoration.</p>
+         <p class="advert-text">
+            Overall Impression:
+
+            The space is designed to be both functional and elegant, with a focus on creating a welcoming and comfortable environment.
+            The combination of modern and traditional elements gives the space a unique and sophisticated feel.
+            </p>
+    </div>
+    
+
+<br>
+</div>
+
+<div class="row" style=" padding:20px; border-radius:5px; border:1px solid  #b98a20;">
+    <br>
+    
+    <div class="col-12 col-sm-3 col-md-6 mb-3" style="">
+        
+        <br>
+        <p class="advert-text">
+            
+
+            The image shows a large, empty hall with a curved ceiling and walls.
+            The hall is decorated with a bright pink carpet covering the floor.
+            The walls are a light beige color with wooden paneling in the right section of the image.
+            There are rows of white chairs along the left side of the hall, suggesting a seating area.
+            The ceiling features multiple circular light fixtures that illuminate the space.
+            The space has a modern and clean design with a focus on functionality and simplicity.
+            The bright pink carpet adds a touch of color and warmth to the otherwise neutral interior.</p>
+    </div>
+    <div class="col-12 col-sm-3 col-md-6 mb-3" style="height: 390px;">
+              
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/I021.jpg' %}');">
+                
+               
+            
+        </div>
+    
+    </div>
+    
+
+    <!-- Second Image -->
+    
+
+</div>
+
+
+    
+
+    <!-- Second Image -->
+    
+<br>
+</div>
+    
+  
+
+
+ 
+
+ 
+
+
+
+
+
+     {% include "footer.html" %}
+
+<!-- Required Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    // Manually initialize the carousel to ensure it works
+    var carousel = new bootstrap.Carousel('#carouselExample', {
+        interval: 3000, // Slide interval in milliseconds
+        ride: 'carousel'
+    });
+</script>
+
+<style>
+    .carousel-inner img {
+        height: 400px;
+        width:100%;
+        object-fit: cover;
+    }
+    @keyframes fadeInOutwards {
+        0%{
+            transform: scale(1.5);
+            opacity: 0;1`
+        }
+        50%{
+            transform: scale(1.2);
+            opacity:0.5;
+        }
+        100%{
+            transform: scale(1);
+            opacity:1;
+        }
+
+
+    }
+</style>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

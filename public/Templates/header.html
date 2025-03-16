@@ -1,0 +1,173 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decor Company</title>
+    <style>
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            position: relative; /* Keeps the navbar in place */
+        }
+
+        .navbar-left, .navbar-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .navbar-right {
+            justify-content: flex-end;
+        }
+
+        .navbar-center {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Horizontal Menu Layout */
+        .push-menu {
+            position: absolute; /* Positioned below the header */
+            top: 100%; /* Position it just below the navbar */
+            left: 0;
+            width: 100%;
+       
+            background-color: #333;
+            color: white;
+            z-index: 1000;
+            padding: 10px 20px;
+            display: none; /* Hidden by default */
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: row;
+            transition: transform 0.3s ease;
+        }
+
+        .push-menu.active {
+            display: flex;
+            transform: translateY(0);
+        }
+       
+
+
+        .menu-toggle {
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+
+        .category-links a {
+            display: inline-block;
+            color:rgb(235, 233, 233);
+            text-decoration: None;
+            padding: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .social-left, .social-right {
+            display: flex;
+            gap: 5px;
+        }
+
+        .social-left {
+            justify-content: flex-start;
+        }
+
+        .social-right {
+            justify-content: flex-end;
+        }
+
+    </style>
+</head>
+<body style="background-image: url('{% static 'image/istockphoto-1070877168-1024x1024.jpg' %}');">
+    <div class="navbar" style="background-image: url('{% static 'image/pexels-andreea-ch-371539-1166644.jpg' %}');">
+        <!-- Empty div for spacing -->
+        <div class="navbar-left">
+            <a href="https://mail.google.com/mail/u/0/#search/sales%40mhddecor.co.tz?compose=new" 
+               style="text-decoration: none; color: black;font-size:12px;">
+               sales@mhddecor.co.tz
+            </a>
+        </div>
+    
+        <!-- Centered Logo -->
+        <div class="navbar-center">
+            <img src="{% static 'image/LOGO.png' %}" 
+                 class="img-fluid my-0" 
+                 style="width:120px; height:auto;" 
+                 alt="Logo">
+        </div>
+    
+        <!-- Email on the Right -->
+        <div class="navbar-right">
+            
+
+            <a href="https://www.instagram.com/mhd_quality_carpettz?igsh=ODE0cXhiZnMzazFh">
+                <img src="{% static 'image/instagram.png' %}" style="width:20px; margin:10px;">
+            </a>
+            <a href="https://www.threads.net/@mhd_quality_carpettz">
+                <img src="{% static 'image/thread.jpg' %}" style="width:20px;margin:10px;">
+            </a>
+            <a href="https://www.facebook.com/memoriki.urio?mibextid=ZbWKwL">
+                <img src="{% static 'image/Facebook.png' %}" style="width:20px;margin:10px;">
+            </a>
+            <a href="https://wa.me/255719363640">
+                <img src="{% static 'image/whatsapp.png' %}" style="width:20px;margin:10px;">
+            </a>
+        
+            <button class="menu-toggle btn" style="font-size: 15px; background-color: #8B0000;">☰</button>
+            <div class="push-menu" id="sidebar">
+                <div class="py-4">
+                  <h5 class="text-center" style="color:rgb(238, 231, 231);">All Categories</h5>
+                  <div class="category-links">
+                    <a href="{% url 'Carpet_tiles' %}">Carpet_tiles</a>
+                    <a href="{% url 'Interior_decoration' %}">Interior decoration</a>
+                    <a href="{% url 'furniture' %}">Furniture</a>
+                    <a href="{% url 'spc' %}">Spc</a>
+                    <a href="{% url 'Lvt' %}">Lvt</a>
+                    <a href="{% url 'Blinds' %}">Blinds</a>
+                    <a href="{% url 'wallTowall' %}">Wall To Wall</a>
+                    <a href="{% url 'Vinylsheetfloor'%}">Vinylsheetfloor</a>
+                   
+                  </div>
+                </div>
+              </div>
+           
+        </div>
+    
+    
+    <!-- Social Media Links Below Navbar -->
+    
+    </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const sidebar = document.getElementById("sidebar");
+            const body = document.body;
+    
+            menuToggle.addEventListener("click", function () {
+                sidebar.classList.toggle("active");
+                body.classList.toggle("menu-active");  // Toggle body movement
+            });
+        });
+    </script>
+</body>
+</html>

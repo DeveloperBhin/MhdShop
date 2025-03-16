@@ -1,0 +1,280 @@
+{% load static %}
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   
+<!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora&display=swap" rel="stylesheet">
+<style>
+    .advert-header {
+        font-family: "Roboto", sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #D4AF37; /* Gold color */
+        text-transform: uppercase;
+    }
+ 
+    .advert-text {
+        font-family:"Roboto Arial", sans-serif;
+        font-size: 1.2rem;
+        color: #444;
+        line-height: 1.6;
+    }
+ 
+    .text-center {
+        text-align: center;
+    }
+ 
+    .mx-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ad-card{
+        
+        background-size: cover;
+        background-position: center;
+        color: white;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+       
+        position: relative;
+        overflow: hidden;
+    }
+
+    .ad-title {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        margin: 0;
+        background: linear-gradient(45deg, #8B0000, #D4AF37);
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-family: "Roboto Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    .ad-content {
+        position: absolute;
+        bottom: 20px;
+        width: 80%;
+       
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    .ad-content p {
+        font-family: "Roboto Lora", serif;
+        font-size: 1rem;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .ad-btn {
+        font-family: " Roboto Playfair Display", serif;
+        font-size: 0.9rem;
+        background-color: #D4AF37;
+        border: none;
+        color: black;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .ad-btn:hover {
+        background-color: #b98a20;
+        color: white;
+    }
+    
+
+
+    /* Icon Styling */
+    .ad-icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    /* Text Styling */
+    .ad-text {
+        font-family: "Roboto Arial", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+ </style>
+ 
+ <!-- Google Fonts -->
+ 
+</head>
+<body>
+    <div class="col-sm-md" style="background-color:#ffffff; position: fixed; top: 80%; right: 0; width: 150px; z-index: 1000; text-align: center; padding: 10px; border-radius: 5px 0 0 5px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); transform: translateY(-50%);">
+        <p style="margin: 0; font-weight: bold; color: :black;">CONTACT US</p>
+        <a href="https://wa.me/255719363640" target="_blank" class="btn btn-success animate-container1" style="color: white; text-decoration: none; font-size: 16px;">
+            Message WhatsApp <img src="{% static 'image/whatsapp.png' %}" style="width: 15px;">
+        </a>
+    </div>
+  
+
+    <div class="row">
+        <div class="col-sm-8 col-md-1 ">
+        </div>
+        <div class="col-12 col-sm-8 col-md-10 mb-3 text-center mx-auto">
+            
+            <br>
+            <p class="advert-text" style="color:rgb(11, 6, 83);">
+              <i> 
+                Vinyl sheet flooring is the perfect blend of style, durability, and affordability for any home or office space. Available in a wide range of designs, from wood and stone looks to vibrant patterns, vinyl offers versatility that suits any decor.</i></p>
+            
+        
+         </div>
+<div class="col-sm-8 col-md-1 ">
+</div>
+</div>
+    
+ 
+<div class="row" style=" padding:20px; border-radius:5px; border:1px solid  #b98a20;">
+    
+    <!-- First Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="height: 390px;">
+              
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/vinyl1.jpg' %}');">
+                
+                
+            
+        </div>
+    
+    </div>
+    
+
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="">
+       
+        <p class="advert-text">
+            The image features a variety of vinyl flooring samples arranged in a geometric pattern.<br>
+            The samples include wood-look vinyl, stone-look vinyl, and terrazzo-look vinyl.<br>
+            The wood-look vinyl samples have a realistic appearance, with visible grain patterns and a warm color palette.<br>
+            The stone-look vinyl samples feature a variety of shades of gray, mimicking the look of natural stone.<br>
+          The terrazzo-look samples are available in a variety of colors, including black, white, and brown.<br>
+            The image showcases the versatility of vinyl flooring, as it can be used to create a variety of looks.</p>
+    </div>
+<br>
+</div>
+
+<div class="row" style=" padding:20px; border-radius:5px; border:1px solid  #b98a20;">
+    <br>
+    
+    <div class="col-12 col-sm-3 col-md-6 mb-3" style="">
+        
+        <p class="advert-text">
+            The image shows four samples of vinyl flooring.<br>
+            The samples are arranged in a stack, with the lightest color at the top and the darkest color at the bottom.<br>
+            The vinyl appears to be waterproof, as water droplets are sitting on the surface.<br>
+            Each sample has a woodgrain pattern, which gives the vinyl a realistic look.<br>
+            Vinyl flooring is a popular choice for homes and businesses because it is durable, easy to clean, and affordable.</p><br>
+    </div>
+    <div class="col-12 col-sm-3 col-md-6 mb-3" style="height: 390px;">
+              
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/IMG_30851.jpg' %}');">
+                
+               
+            
+        </div>
+    
+    </div>
+    
+
+    <!-- Second Image -->
+    
+
+</div>
+
+    
+
+<div class="row" style=" padding:20px; border-radius:5px; border:1px solid  #b98a20;">
+    
+    <!-- First Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="height: 390px;">
+              
+            <div class="card p-3 ad-card" style="background-image: url('{% static 'image/vinyl.jpg' %}');">
+                
+                
+            
+        </div>
+    
+    </div>
+    
+
+    <!-- Second Image -->
+    <div class="col-12 col-sm-6 col-md-6 mb-3" style="">
+
+        <p class="advert-text">
+            The image contains a variety of vinyl tiles.
+            Some of the tiles are plain, while others have patterns or textures.
+            The tiles appear to be arranged in rows.
+            The tiles are likely for use in kitchens, bathrooms, or other areas of the home.
+            Some are made to look like wood, others like stone.</p>
+    </div>
+<br>
+</div>
+
+
+ 
+
+ 
+
+
+
+
+
+     {% include "footer.html" %}
+
+<!-- Required Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    // Manually initialize the carousel to ensure it works
+    var carousel = new bootstrap.Carousel('#carouselExample', {
+        interval: 3000, // Slide interval in milliseconds
+        ride: 'carousel'
+    });
+</script>
+
+<style>
+    .carousel-inner img {
+        height: 400px;
+        width:100%;
+        object-fit: cover;
+    }
+    @keyframes fadeInOutwards {
+        0%{
+            transform: scale(1.5);
+            opacity: 0;1`
+        }
+        50%{
+            transform: scale(1.2);
+            opacity:0.5;
+        }
+        100%{
+            transform: scale(1);
+            opacity:1;
+        }
+
+
+    }
+</style>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
