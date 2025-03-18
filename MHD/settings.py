@@ -28,9 +28,7 @@ SECRET_KEY = 'django-insecure-=^(0!y6+085l8&uv5z@u+x0w43h$^0iby92(g^d+=-d^+&mx%u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mhddecor.deploy.tz','www.mhddecor.deploy.tz'
-
-]
+ALLOWED_HOSTS = ['www.mhddecor.deploy.tz']
 
 
 # Application definition
